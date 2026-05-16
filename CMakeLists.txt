@@ -8,3 +8,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Add executable
 add_executable(main main.cpp)
 add_executable(act0101 src/act0101.cpp)
+add_executable(ex0201 src/ex0201.cpp)
