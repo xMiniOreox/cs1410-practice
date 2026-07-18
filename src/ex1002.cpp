@@ -35,22 +35,13 @@ public:
 
 int main() {
     vector<Animal*> pets;
-    // Swap order: first Pet is Cat, second is Dog
-    pets.push_back(new Cat()); // index 0
-    pets.push_back(new Dog()); // index 1
+    pets.push_back(new Dog());
+    pets.push_back(new Cat());
 
-    // First call: should output "Meow" (from Cat)
     for (Animal* pet : pets) {
         pet->speak();
     }
 
-    // References
-    Animal& c = *pets[0]; // Cat
-    Animal& d = *pets[1]; // Dog
-    c.speak(); // Meow
-    d.speak(); // Woof
-
-    // Clean up
     for (Animal* pet : pets) {
         delete pet;
     }
